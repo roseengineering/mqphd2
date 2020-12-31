@@ -22,7 +22,7 @@ can now guide it over MQTT using the program in this repo, mqphd2.
 
 ### Introduction
 
-How does this work?  PHD2 itself provides a network "socket"
+How does this work?  PHD2 itself provides a network server (or socket)
 for remote control of the program.  mqphd2 in effect relays commands 
 sent over MQTT to PHD2 by way of this socket.
 
