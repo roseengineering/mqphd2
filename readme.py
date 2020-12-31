@@ -18,7 +18,7 @@ print(f"""\
 This repo contains a MQTT PHD2 telescope 
 guiding client.
 Instead of using the PHD2 GUI to guide your telescope, you
-can guide it over MQTT using the program in this repo, mqphd2.  
+can now guide it over MQTT using the program in this repo, mqphd2.  
 
 ### Introduction
 
