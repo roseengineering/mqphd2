@@ -3,7 +3,7 @@ guiding client.
 Instead of using the PHD2 GUI to guide your telescope, you
 can guide it over MQTT using the program in this repo, mqphd2.  
 
-How does this work.  PHD2 itself provides a network "socket"
+How does this work?  PHD2 itself provides a network "socket"
 for remote control of the program.  mqphd2 in effect relays commands 
 sent over MQTT to PHD2 by way of this socket.
 
