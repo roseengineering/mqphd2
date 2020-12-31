@@ -85,7 +85,7 @@ the repo https://github.com/roseengineering/bluesoapysuite.
 1. mqclient is a simple command line program for communicating
 over the MQTT command topic.
 
-2. The other is called mqblue, it lets you communicate over
+2. The other is called mqblue.  It lets you communicate over
 MQTT using bluetooth.  It works with the Raspberry Pi
 and your phone.
 
