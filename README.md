@@ -65,11 +65,11 @@ optional arguments:
   --broker-keepalive BROKER_KEEPALIVE
                         broker keepalive seconds (default: 60)
   --topic TOPIC         broker topic for command (default: f/tx)
-  --host HOST           phd2 remote host (default: localhost)
-  --port PORT           phd2 remote port (default: 4400)
-  --shell SHELL         phd2 shell command (default: xvfb-run -s '-screen 0
+  --host HOST           PHD2 remote host (default: localhost)
+  --port PORT           PHD2 remote port (default: 4400)
+  --shell SHELL         PHD2 shell command (default: xvfb-run -s '-screen 0
                         800x600x8' phd2)
-  --norun               do not run phd on start (default: False)
+  --norun               do not run PHD2 on start (default: False)
 ```
 
 

@@ -12,10 +12,10 @@ parser.add_argument("--broker-port", default=1883, type=int, help='broker port')
 parser.add_argument("--broker-keepalive", default=60, type=int, help='broker keepalive seconds')
 parser.add_argument("--topic", default="f/tx", help='broker topic for command')
 
-parser.add_argument("--host", default="localhost", help="phd2 remote host")
-parser.add_argument("--port", type=int, default=4400, help="phd2 remote port")
-parser.add_argument("--shell", default="xvfb-run -s '-screen 0 800x600x8' phd2", help="phd2 shell command")
-parser.add_argument("--norun", action="store_true", help="do not run phd on start")
+parser.add_argument("--host", default="localhost", help="PHD2 remote host")
+parser.add_argument("--port", type=int, default=4400, help="PHD2 remote port")
+parser.add_argument("--shell", default="xvfb-run -s '-screen 0 800x600x8' phd2", help="PHD2 shell command")
+parser.add_argument("--norun", action="store_true", help="do not run PHD2 on start")
 
 
 ident = 0
