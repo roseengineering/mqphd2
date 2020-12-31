@@ -74,7 +74,7 @@ optional arguments:
 
 
 Note, the program xvfb-run lets you run GUI programs on a
-headless computer, like a Raspberry Pi running Raspbian Lite.
+headless computer, namely a Raspberry Pi running Raspbian Lite.
 
 ### mqclient and mqblue
 
@@ -82,10 +82,10 @@ Two additional programs are provided, one is called
 mqclient and the other mqblue.  These programs located in
 the repo at https://github.com/roseengineering/bluesoapysuite.
 
-mqclient is a simmple command line program for communicating
+1. mqclient is a simple command line program for communicating
 over the MQTT command topic.
 
-The other is called mqblue, it lets you communicate over
+2. The other is called mqblue, it lets you communicate over
 MQTT using bluetooth.  It works with the Raspberry Pi
 and your phone.
 
@@ -159,6 +159,30 @@ f/event StartCalibration On Camera
 f/event West step 1, dist= 0.0
 f/event West step 2, dist= 4.0
 f/event West step 3, dist= 7.7
+...
+f/event South step 4, dist=20.4
+f/event South step 3, dist=14.9
+f/event South step 2, dist= 9.4
+f/event South step 1, dist= 3.9
+f/event Nudge South 1
+f/event Nudge South 2
+f/event ConfigurationChange
+f/event CalibrationComplete
+f/event StartGuiding
+f/event SettleBegin
+f/event Settling
+f/event HFD 1.63 d 1.97
+f/event Settling
+f/event HFD 1.84 d 1.63
+f/event Settling
+f/event HFD 1.29 d 1.23
+f/event HFD 1.13 d 0.29
+f/event HFD 1.51 d 0.26
+f/event HFD 1.35 d 0.26
+f/event HFD 1.17 d 0.23
+f/event HFD 1.68 d 0.18
+f/event HFD 1.45 d 0.16
+f/event HFD 1.79 d 0.17
 ...
 ```
 

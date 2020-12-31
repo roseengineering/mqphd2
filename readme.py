@@ -70,7 +70,7 @@ The program supports the following command line options:
 {run("python3 mqphd2.py --help")}
 
 Note, the program xvfb-run lets you run GUI programs on a
-headless computer, like a Raspberry Pi running Raspbian Lite.
+headless computer, namely a Raspberry Pi running Raspbian Lite.
 
 ### mqclient and mqblue
 
@@ -78,10 +78,10 @@ Two additional programs are provided, one is called
 mqclient and the other mqblue.  These programs located in
 the repo at https://github.com/roseengineering/bluesoapysuite.
 
-mqclient is a simmple command line program for communicating
+1. mqclient is a simple command line program for communicating
 over the MQTT command topic.
 
-The other is called mqblue, it lets you communicate over
+2. The other is called mqblue, it lets you communicate over
 MQTT using bluetooth.  It works with the Raspberry Pi
 and your phone.
 
