@@ -23,9 +23,9 @@ for remote control of the telescope.  What this repo provides is a client, mqphd
 PHD2 over this socket.
 
 Commands to mqphd2 are sent over a command MQTT topic.  By default
-this topic is names "f/tx".  Responses and status messages
-from are sent over "f/#" placing the tx subtopic with the response
-type.
+this topic is named "f/tx".  Responses and status messages
+from PHD2 from are relayed back over the topic "f/#" where
+# is response type.
 
 For example error messages are sent over topic "f/error", command
 results are sent over "f/result", and event messages are sent over
