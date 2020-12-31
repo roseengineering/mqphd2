@@ -156,6 +156,30 @@ f/event West step 1, dist= 0.0
 f/event West step 2, dist= 4.0
 f/event West step 3, dist= 7.7
 ...
+f/event South step 4, dist=20.4
+f/event South step 3, dist=14.9
+f/event South step 2, dist= 9.4
+f/event South step 1, dist= 3.9
+f/event Nudge South 1
+f/event Nudge South 2
+f/event ConfigurationChange
+f/event CalibrationComplete
+f/event StartGuiding
+f/event SettleBegin
+f/event Settling
+f/event HFD 1.63 d 1.97
+f/event Settling
+f/event HFD 1.84 d 1.63
+f/event Settling
+f/event HFD 1.29 d 1.23
+f/event HFD 1.13 d 0.29
+f/event HFD 1.51 d 0.26
+f/event HFD 1.35 d 0.26
+f/event HFD 1.17 d 0.23
+f/event HFD 1.68 d 0.18
+f/event HFD 1.45 d 0.16
+f/event HFD 1.79 d 0.17
+...
 ```
 
 """)
