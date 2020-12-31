@@ -69,6 +69,9 @@ The program supports the following command line options:
 
 {run("python3 mqphd2.py --help")}
 
+Note, the program xvfb-run lets you run GUI programs on a
+headless computer, like a Raspberry Pi running Raspbian Lite.
+
 ### mqclient and mqblue
 
 Two additional programs are provided, one is called 

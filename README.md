@@ -73,6 +73,9 @@ optional arguments:
 ```
 
 
+Note, the program xvfb-run lets you run GUI programs on a
+headless computer, like a Raspberry Pi running Raspbian Lite.
+
 ### mqclient and mqblue
 
 Two additional programs are provided, one is called 
