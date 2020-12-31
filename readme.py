@@ -20,9 +20,13 @@ guiding client.
 Instead of using the PHD2 GUI to guide your telescope, you
 can guide it over MQTT using the program in this repo, mqphd2.  
 
+### Introduction
+
 How does this work?  PHD2 itself provides a network "socket"
 for remote control of the program.  mqphd2 in effect relays commands 
 sent over MQTT to PHD2 by way of this socket.
+
+### mqphd2
 
 Commands to mqphd2 are sent over a command MQTT topic.  By default
 this topic is named "f/tx".  Responses and status messages
@@ -61,9 +65,11 @@ cc       # clear calibration
 fc       # flip calibration
 ```
 
-The program supports the following command line options
+The program supports the following command line options:
 
 {run("python3 mqphd2.py --help")}
+
+### mqclient and mqblue
 
 Two additional programs are provided, one is called 
 mqclient and the other mqblue.  These programs located in
