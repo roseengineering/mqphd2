@@ -79,8 +79,8 @@ headless computer, namely a Raspberry Pi running Raspbian Lite.
 ### mqclient and mqblue
 
 Two additional programs are provided, one is called 
-mqclient and the other mqblue.  These programs located in
-the repo at https://github.com/roseengineering/bluesoapysuite.
+mqclient and the other mqblue.  These programs are located in
+the repo https://github.com/roseengineering/bluesoapysuite.
 
 1. mqclient is a simple command line program for communicating
 over the MQTT command topic.
