@@ -19,8 +19,7 @@ This repo contains a MQTT PHD2 telescope
 guiding client.
 So instead of using the PHD2 GUI to guide your telescope, you
 can guide it over MQTT.  PHD2 provides a network "socket"
-for remote control of the program.  What mqphd2 does
-is translate commands sent by MQTT and relays them to
+for remote control of the telescope.  What this repo provides is a client, mqphd2, that relays commands sent over MQTT to
 PHD2 over this socket.
 
 Commands to mqphd2 are sent over a command MQTT topic.  By default
