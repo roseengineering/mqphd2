@@ -9,8 +9,8 @@ sent over MQTT to PHD2 by way of this socket.
 
 Commands to mqphd2 are sent over a command MQTT topic.  By default
 this topic is named "f/tx".  Responses and status messages
-from PHD2 from are relayed back over the topic "f/#" where
-\# is response type.  That is, error messages are sent over 
+from PHD2 are then relayed back using the topic "f/#" with 
+\# replaced with the response type.  That is, error messages are sent over 
 the topic "f/error", command results are sent over "f/result", and 
 event messages are sent over "f/event"
 
