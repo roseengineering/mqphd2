@@ -56,7 +56,7 @@ sp [1.5] # set settle object pixels to settle value
 
 gc       # get whether telescope is connected
 ge       # get exposure time
-gs       # get PHD2 state.
+gs       # get PHD2 state
 gd       # get valid exposure durations
 gp       # get whether paused
 ga       # get calibration
