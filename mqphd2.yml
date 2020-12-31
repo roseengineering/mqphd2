@@ -1,0 +1,180 @@
+---
+
+  # headless
+
+  - become: yes
+    apt:
+      name:
+      - xvfb
+
+  # pip
+
+  - become: yes
+    pip:
+      name:
+      - paho-mqtt
+
+  # code
+
+  - become: yes
+    copy:
+      mode: 0755
+      dest: /usr/local/bin/mqphd2
+      content: !!binary |
+        IyEvdXNyL2Jpbi9weXRob24zCgppbXBvcnQgc3VicHJvY2VzcywgdGltZSwg
+        c29ja2V0LCBhcmdwYXJzZSwganNvbgppbXBvcnQgcGFoby5tcXR0LmNsaWVu
+        dCBhcyBtcXR0CgoKcGFyc2VyID0gYXJncGFyc2UuQXJndW1lbnRQYXJzZXIo
+        CiAgICBmb3JtYXR0ZXJfY2xhc3M9YXJncGFyc2UuQXJndW1lbnREZWZhdWx0
+        c0hlbHBGb3JtYXR0ZXIpCgpwYXJzZXIuYWRkX2FyZ3VtZW50KCItLWJyb2tl
+        ciIsIGRlZmF1bHQ9IjAuMC4wLjAiLCBoZWxwPSdicm9rZXIgaG9zdCcpCnBh
+        cnNlci5hZGRfYXJndW1lbnQoIi0tYnJva2VyLXBvcnQiLCBkZWZhdWx0PTE4
+        ODMsIHR5cGU9aW50LCBoZWxwPSdicm9rZXIgcG9ydCcpCnBhcnNlci5hZGRf
+        YXJndW1lbnQoIi0tYnJva2VyLWtlZXBhbGl2ZSIsIGRlZmF1bHQ9NjAsIHR5
+        cGU9aW50LCBoZWxwPSdicm9rZXIga2VlcGFsaXZlIHNlY29uZHMnKQpwYXJz
+        ZXIuYWRkX2FyZ3VtZW50KCItLXRvcGljIiwgZGVmYXVsdD0iZi90eCIsIGhl
+        bHA9J2Jyb2tlciB0b3BpYyBmb3IgY29tbWFuZCcpCgpwYXJzZXIuYWRkX2Fy
+        Z3VtZW50KCItLWhvc3QiLCBkZWZhdWx0PSJsb2NhbGhvc3QiLCBoZWxwPSJw
+        aGQyIHJlbW90ZSBob3N0IikKcGFyc2VyLmFkZF9hcmd1bWVudCgiLS1wb3J0
+        IiwgdHlwZT1pbnQsIGRlZmF1bHQ9NDQwMCwgaGVscD0icGhkMiByZW1vdGUg
+        cG9ydCIpCnBhcnNlci5hZGRfYXJndW1lbnQoIi0tc2hlbGwiLCBkZWZhdWx0
+        PSJ4dmZiLXJ1biAtcyAnLXNjcmVlbiAwIDgwMHg2MDB4OCcgcGhkMiIsIGhl
+        bHA9InBoZDIgc2hlbGwgY29tbWFuZCIpCnBhcnNlci5hZGRfYXJndW1lbnQo
+        Ii0tbm9ydW4iLCBhY3Rpb249InN0b3JlX3RydWUiLCBoZWxwPSJkbyBub3Qg
+        cnVuIHBoZCBvbiBzdGFydCIpCgoKaWRlbnQgPSAwCnNldHRsZV90aW1lb3V0
+        ID0gNjAKc2V0dGxlX3RpbWUgPSAxMApzZXR0bGVfcGl4ZWxzID0gMS41Cgpk
+        ZWYgY2FzdChidWYpOgogICAgdHJ5OgogICAgICAgIGlmIGJ1Zi5pc251bWVy
+        aWMoKTogcmV0dXJuIGludChidWYpCiAgICAgICAgcmV0dXJuIGZsb2F0KGJ1
+        ZikKICAgIGV4Y2VwdDoKICAgICAgICBwYXNzCgoKZGVmIGdlbl90b3BpYyhu
+        YW1lPU5vbmUpOgogICAgZCA9IGFyZ3MudG9waWMuc3BsaXQoJy8nKVs6LTFd
+        CiAgICBpZiBuYW1lIGlzIG5vdCBOb25lOgogICAgICAgIGQuYXBwZW5kKG5h
+        bWUpCiAgICByZXR1cm4gJy8nLmpvaW4oZCkKCgpkZWYgb25fY29ubmVjdChi
+        cm9rZXIsIHVzZXJkYXRhLCBmbGFncywgcmMpOgogICAgYnJva2VyLnN1YnNj
+        cmliZShnZW5fdG9waWMoJyMnKSkKCgpkZWYgYnJva2VyX2luaXQoKToKICAg
+        IGJyb2tlciA9IG1xdHQuQ2xpZW50KCkKICAgIGJyb2tlci5vbl9jb25uZWN0
+        ID0gb25fY29ubmVjdAogICAgYnJva2VyLm9uX21lc3NhZ2UgPSBvbl9tZXNz
+        YWdlCiAgICBicm9rZXIuY29ubmVjdChhcmdzLmJyb2tlciwgYXJncy5icm9r
+        ZXJfcG9ydCwgYXJncy5icm9rZXJfa2VlcGFsaXZlKQogICAgYnJva2VyLmxv
+        b3Bfc3RhcnQoKQogICAgcmV0dXJuIGJyb2tlcgoKCmRlZiBzZXR0bGVfb2Jq
+        ZWN0KCk6CiAgICByZXR1cm4geyAKICAgICAgICAicGl4ZWxzIjogc2V0dGxl
+        X3BpeGVscywgCiAgICAgICAgInRpbWUiOiBzZXR0bGVfdGltZSwgCiAgICAg
+        ICAgInRpbWVvdXQiOiBzZXR0bGVfdGltZW91dCAKICAgIH0KCgpkZWYgc3Bh
+        d25fcGhkMigpOgogICAgc3VicHJvY2Vzcy5Qb3BlbihhcmdzLnNoZWxsLCBz
+        aGVsbD1UcnVlKQogICAgdGltZS5zbGVlcCgyKQoKCmRlZiBvbl9tZXNzYWdl
+        KGJyb2tlciwgdXNlcmRhdGEsIG1zZyk6CiAgICBnbG9iYWwgc2V0dGxlX3Rp
+        bWVvdXQsIHNldHRsZV90aW1lLCBzZXR0bGVfcGl4ZWxzCiAgICBwYXlsb2Fk
+        ID0gbXNnLnBheWxvYWQuZGVjb2RlKCdsYXRpbicpLnN0cmlwKCkKICAgIGlm
+        IHBheWxvYWQgYW5kIG1zZy50b3BpYyA9PSBhcmdzLnRvcGljOgogICAgICAg
+        IGNtZCwgXywgcGFyYW0gPSBwYXlsb2FkLmxvd2VyKCkucGFydGl0aW9uKCcg
+        JykgCiAgICAgICAgcGFyYW0gPSBwYXJhbS5zdHJpcCgpCiAgICAgICAgaWYg
+        Y21kID09ICJjIjoKICAgICAgICAgICAgaXNzdWUoInNldF9jb25uZWN0ZWQi
+        LCBUcnVlKQogICAgICAgIGlmIGNtZCA9PSAiZSI6CiAgICAgICAgICAgIHBh
+        cmFtID0gY2FzdChwYXJhbSkgb3IgMTAKICAgICAgICAgICAgaXNzdWUoInNl
+        dF9leHBvc3VyZSIsIHBhcmFtKQogICAgICAgIGlmIGNtZCA9PSAicyI6CiAg
+        ICAgICAgICAgIGlzc3VlKCJzdG9wX2NhcHR1cmUiKQogICAgICAgIGlmIGNt
+        ZCA9PSAibCI6ICAgIAogICAgICAgICAgICBpc3N1ZSgibG9vcCIpICMgbG9v
+        cHMsIGZpbmRzIHN0YXIsIHRoZW4gc3RhcnRzIGd1aWRpbmcKICAgICAgICBp
+        ZiBjbWQgPT0gImZzIjoKICAgICAgICAgICAgaXNzdWUoImZpbmRfc3RhciIp
+        CiAgICAgICAgaWYgY21kID09ICJwIjoKICAgICAgICAgICAgaXNzdWUoInNl
+        dF9wYXVzZWQiLCBUcnVlKQogICAgICAgIGlmIGNtZCA9PSAidSI6CiAgICAg
+        ICAgICAgIGlzc3VlKCJzZXRfcGF1c2VkIiwgRmFsc2UpCiAgICAgICAgaWYg
+        Y21kID09ICJnIjoKICAgICAgICAgICAgc2V0dGxlID0gc2V0dGxlX29iamVj
+        dCgpCiAgICAgICAgICAgIGlzc3VlKCJndWlkZSIsIHsgInNldHRsZSI6IHNl
+        dHRsZSB9KQogICAgICAgIGlmIGNtZCA9PSAiZCI6CiAgICAgICAgICAgIHBh
+        cmFtID0gY2FzdChwYXJhbSkgb3IgMTAKICAgICAgICAgICAgc2V0dGxlID0g
+        c2V0dGxlX29iamVjdCgpCiAgICAgICAgICAgIGlzc3VlKCJndWlkZSIsIHsg
+        ImFtb3VudCI6IHBhcmFtLCAic2V0dGxlIjogc2V0dGxlIH0pCiAgICAgICAg
+        aWYgY21kID09ICJrIjoKICAgICAgICAgICAgaXNzdWUoInNodXRkb3duIikK
+        ICAgICAgICBpZiBjbWQgPT0gInJ1biI6CiAgICAgICAgICAgIHNwYXduX3Bo
+        ZDIoKQoKICAgICAgICAjIHNldHRlcnMKICAgICAgICBpZiBjbWQgPT0gInRv
+        IjoKICAgICAgICAgICAgc2V0dGxlX3RpbWVvdXQgPSBjYXN0KHBhcmFtKSBv
+        ciA2MAogICAgICAgIGlmIGNtZCA9PSAic3QiOgogICAgICAgICAgICBzZXR0
+        bGVfdGltZSA9IGNhc3QocGFyYW0pIG9yIDEwCiAgICAgICAgaWYgY21kID09
+        ICJzcCI6CiAgICAgICAgICAgIHNldHRsZV9waXhlbHMgPSBjYXN0KHBhcmFt
+        KSBvciAxLjUKCiAgICAgICAgIyBnZXR0ZXJzCiAgICAgICAgaWYgY21kID09
+        ICJnYyI6CiAgICAgICAgICAgIGlzc3VlKCJnZXRfY29ubmVjdGVkIikKICAg
+        ICAgICBpZiBjbWQgPT0gImdlIjoKICAgICAgICAgICAgaXNzdWUoImdldF9l
+        eHBvc3VyZSIpCiAgICAgICAgaWYgY21kID09ICJncyI6CiAgICAgICAgICAg
+        IGlzc3VlKCJnZXRfYXBwX3N0YXRlIikKICAgICAgICBpZiBjbWQgPT0gImdk
+        IjoKICAgICAgICAgICAgaXNzdWUoImdldF9leHBvc3VyZV9kdXJhdGlvbnMi
+        KQogICAgICAgIGlmIGNtZCA9PSAiZ3AiOgogICAgICAgICAgICBpc3N1ZSgi
+        Z2V0X3BhdXNlZCIpCiAgICAgICAgaWYgY21kID09ICJnYSI6CiAgICAgICAg
+        ICAgIGlzc3VlKCJnZXRfY2FsaWJyYXRlZCIpCgogICAgICAgICMgY2FsaWJy
+        YXRpb24KICAgICAgICBpZiBjbWQgPT0gImNjIjoKICAgICAgICAgICAgaXNz
+        dWUoImNsZWFyX2NhbGlicmF0aW9uIikKICAgICAgICBpZiBjbWQgPT0gImZj
+        IjoKICAgICAgICAgICAgaXNzdWUoImZsaXBfY2FsaWJyYXRpb24iKQoKCmRl
+        ZiBpc3N1ZShtZXRob2QsIHBhcmFtPU5vbmUpOgogICAgZ2xvYmFsIGlkZW50
+        CiAgICBpZGVudCArPSAxCiAgICBkID0geyAnbWV0aG9kJzogbWV0aG9kLCAn
+        aWQnOiBpZGVudCB9CiAgICBpZiBwYXJhbSBpcyBub3QgTm9uZTogCiAgICAg
+        ICAgZFsncGFyYW1zJ10gPSBwYXJhbSBpZiB0eXBlKHBhcmFtKSBpcyBkaWN0
+        IGVsc2UgWyBwYXJhbSBdCiAgICBidWYgPSBqc29uLmR1bXBzKGQpCiAgICBw
+        cmludCgnPicsIGJ1ZikKICAgIHNvY2suc2VuZGFsbChidWYuZW5jb2RlKCkg
+        KyBiJ1xuJykKCgpkZWYgcmVhZGxuKHMpOgogICAgbGluZSA9IGIiIgogICAg
+        d2hpbGUgVHJ1ZToKICAgICAgICBwYXJ0ID0gcy5yZWN2KDEpCiAgICAgICAg
+        aWYgcGFydCAhPSBiIlxuIjoKICAgICAgICAgICAgbGluZSArPSBwYXJ0CiAg
+        ICAgICAgZWxzZToKICAgICAgICAgICAgeWllbGQgbGluZS5zdHJpcCgpLmRl
+        Y29kZSgpCiAgICAgICAgICAgIGxpbmUgPSBiIiIKCgpkZWYgbWFpbigpOgog
+        ICAgZ2xvYmFsIHNvY2sKICAgIGlmIG5vdCBhcmdzLm5vcnVuOgogICAgICAg
+        IHNwYXduX3BoZDIoKQogICAgd2hpbGUgVHJ1ZToKICAgICAgICBzb2NrID0g
+        Tm9uZQogICAgICAgIGJyb2tlciA9IGJyb2tlcl9pbml0KCkKICAgICAgICB0
+        cnk6CiAgICAgICAgICAgIHNvY2sgPSBzb2NrZXQuc29ja2V0KHNvY2tldC5B
+        Rl9JTkVULCBzb2NrZXQuU09DS19TVFJFQU0pCiAgICAgICAgICAgIHNvY2su
+        Y29ubmVjdCgoYXJncy5ob3N0LCBhcmdzLnBvcnQpKQogICAgICAgICAgICBm
+        b3IgbGluZSBpbiByZWFkbG4oc29jayk6CiAgICAgICAgICAgICAgICAjIHBy
+        aW50KGxpbmUpCiAgICAgICAgICAgICAgICBkID0ganNvbi5sb2FkcyhsaW5l
+        LCBzdHJpY3Q9RmFsc2UpIAogICAgICAgICAgICAgICAgaWYgJ2pzb25ycGMn
+        IGluIGQgYW5kICdlcnJvcicgaW4gZDoKICAgICAgICAgICAgICAgICAgICBi
+        dWYgPSBkWydlcnJvciddWydtZXNzYWdlJ10KICAgICAgICAgICAgICAgICAg
+        ICBicm9rZXIucHVibGlzaChnZW5fdG9waWMoJ2Vycm9yJyksIGJ1ZikKICAg
+        ICAgICAgICAgICAgIGVsaWYgJ2pzb25ycGMnIGluIGQgYW5kICdyZXN1bHQn
+        IGluIGQ6CiAgICAgICAgICAgICAgICAgICAgcmVzID0gZFsncmVzdWx0J10K
+        ICAgICAgICAgICAgICAgICAgICBidWYgPSByZXMgaWYgdHlwZShyZXMpIGlz
+        IHN0ciBlbHNlIGpzb24uZHVtcHMocmVzKQogICAgICAgICAgICAgICAgICAg
+        IGJyb2tlci5wdWJsaXNoKGdlbl90b3BpYygncmVzdWx0JyksIGJ1ZikKICAg
+        ICAgICAgICAgICAgIGVsaWYgJ0V2ZW50JyBpbiBkOgogICAgICAgICAgICAg
+        ICAgICAgIGV2dCA9IGRbJ0V2ZW50J10KICAgICAgICAgICAgICAgICAgICBi
+        dWYgPSBmIntldnR9IgogICAgICAgICAgICAgICAgICAgIHRyeToKICAgICAg
+        ICAgICAgICAgICAgICAgICAgaWYgZXZ0ID09ICJWZXJzaW9uIjoKICAgICAg
+        ICAgICAgICAgICAgICAgICAgICAgIGJ1ZiArPSBmIiB7ZFsnUEhEVmVyc2lv
+        biddfSIKICAgICAgICAgICAgICAgICAgICAgICAgaWYgZXZ0ID09ICJBcHBT
+        dGF0ZSI6CiAgICAgICAgICAgICAgICAgICAgICAgICAgICBidWYgKz0gZiIg
+        e2RbJ1N0YXRlJ119IgogICAgICAgICAgICAgICAgICAgICAgICBpZiBldnQg
+        PT0gIlN0YXJ0Q2FsaWJyYXRpb24iOgogICAgICAgICAgICAgICAgICAgICAg
+        ICAgICAgYnVmICs9IGYiIHtkWydNb3VudCddfSIKICAgICAgICAgICAgICAg
+        ICAgICAgICAgaWYgZXZ0ID09ICJDYWxpYnJhdGluZyI6CiAgICAgICAgICAg
+        ICAgICAgICAgICAgICAgICBidWYgPSBmIntkWydTdGF0ZSddfSIKICAgICAg
+        ICAgICAgICAgICAgICAgICAgICAgIGJ1ZiA9ICcgJy5qb2luKGJ1Zi5zcGxp
+        dCgpKQogICAgICAgICAgICAgICAgICAgICAgICBpZiBldnQgPT0gIkd1aWRl
+        U3RlcCI6CiAgICAgICAgICAgICAgICAgICAgICAgICAgICBidWYgPSBmIkhG
+        RCB7ZFsnSEZEJ119IGQge2RbJ0F2Z0Rpc3QnXX0iCiAgICAgICAgICAgICAg
+        ICAgICAgZXhjZXB0IEtleUVycm9yOgogICAgICAgICAgICAgICAgICAgICAg
+        ICBwYXNzIAogICAgICAgICAgICAgICAgICAgIGJyb2tlci5wdWJsaXNoKGdl
+        bl90b3BpYygiZXZlbnQiKSwgYnVmKQogICAgICAgICAgICAgICAgZWxzZToK
+        ICAgICAgICAgICAgICAgICAgICBidWYgPSBqc29uLmR1bXBzKGQpCiAgICAg
+        ICAgICAgICAgICAgICAgYnJva2VyLnB1Ymxpc2goZ2VuX3RvcGljKCJ1bmtu
+        b3duIiksIGJ1ZikKICAgICAgICBleGNlcHQgRXhjZXB0aW9uIGFzIGU6CiAg
+        ICAgICAgICAgIHByaW50KGUpCiAgICAgICAgICAgIGJyb2tlci5wdWJsaXNo
+        KGdlbl90b3BpYygiZXhjZXB0aW9uIiksIHN0cihlKSkKICAgICAgICAgICAg
+        dGltZS5zbGVlcCgxMCkKICAgICAgICBicm9rZXIubG9vcF9zdG9wKCkKICAg
+        ICAgICBicm9rZXIuZGlzY29ubmVjdCgpCgoKaWYgX19uYW1lX18gPT0gJ19f
+        bWFpbl9fJzoKICAgIGFyZ3MgPSBwYXJzZXIucGFyc2VfYXJncygpCiAgICBt
+        YWluKCkKCgoK
+
+
+
+  - become: yes
+    copy:
+      dest: /lib/systemd/system/mqphd2.service
+      content: |
+        [Service]
+        ExecStart=/usr/bin/python3 -u /usr/local/bin/mqphd2
+        User=george
+        Restart=on-failure
+        RestartSec=10s
+        [Install]
+        WantedBy=multi-user.target
+
+  - become: yes
+    shell: |
+      sudo systemctl enable mqphd2
+      sudo systemctl restart mqphd2
+
